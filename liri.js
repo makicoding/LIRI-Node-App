@@ -43,7 +43,7 @@ if (userInput1 === "concert-this") {
 } 
 
 if (userInput1 === "spotify-this-song") {
-    spotifyThisCall();
+    spotifyThisSongCall();
 }
 
 if (userInput1 === "movie-this") {
@@ -57,14 +57,14 @@ if (userInput1 === "do-what-it-says") {
 
 
 // ----------------------------------------
-// AXIOS CALL FUNCTIONS
+// API CALL FUNCTIONS
 
 // Function concertThisCall
 function concertThisCall() {
 
+    // AXIOS Call
     var queryURL = "https://rest.bandsintown.com/artists/" + userInput2 + "/events?app_id=codingbootcamp";
 
-    // AXIOS CALL
     axios.get(queryURL).then(function(response) {
 
         // console.log(response);   // See the entire response from the AXIOS call to identify which parts we want to use
@@ -85,15 +85,34 @@ function concertThisCall() {
 
 // --------------------
 // Function spotifyThisCall
-function spotifyThisCall() {
+function spotifyThisSongCall() {
 
+    // If the user does not specify a song, "ghostbusters" will be searched
+    if(userInput2 === undefined) {      // Here, userInput2 will not be specified by the user and so we use undefined
+        userInput2 = "ghostbusters";
+    }
+
+    // Call to Spotify
     spotify
-    .search({ type: 'track', query: 'All the Small Things' })
+    .search({ type: 'track', query: userInput2 })
     .then(function(response) {
-      console.log(response);
+
+        //console.log(response);   // See the entire response from the Spotify call to identify which parts we want to use
+        
+        //for(var j = 0; j < response.tracks.items[0].album.artists.length; j++) {      // THIS DOES NOT WORK, 
+                                                                                        // NEED TO FIND A FIX IN FOR LOOP TO DISPLAY ALL THE DIFFERENT SEARCH RESULTS
+
+        // THIS IS FOR A SINGLE-SEARCH-RESULT SCENARIO:
+            console.log("Artist: " + response.tracks.items[0].album.artists[0].name);
+            console.log("Song name: " + response.tracks.items[0].name);
+            console.log("Preview link of song from Spotify: " + response.tracks.items[0].href);
+            console.log("Album where song appears: " + response.tracks.items[0].album.name)
+        
+        //}
+
     })
     .catch(function(err) {
-      console.log(err);
+      console.log(err);     // If the code experiences any errors it will log the error to the console
     });
 
 }
@@ -104,12 +123,17 @@ function spotifyThisCall() {
 // Function movieThisCall
 function movieThisCall() {
 
+    // If the user does not specify a movie, "mr.nobody" will be searched
+    if(userInput2 === undefined) {      // Here, userInput2 will not be specified by the user and so we use undefined
+        userInput2 = "mr.nobody";
+    }
+
+    // AXIOS Call
     var queryURL = "http://www.omdbapi.com/?t=" + userInput2 + "&y=&plot=short&apikey=trilogy";
 
-    // AXIOS CALL
     axios.get(queryURL).then(function(response) {
 
-        console.log(response);   // See the entire response from the AXIOS call to identify which parts we want to use
+        //console.log(response);   // See the entire response from the AXIOS call to identify which parts we want to use
 
         console.log("Title of movie: " + response.data.Title);
         console.log("Year: " + response.data.Year);
@@ -119,6 +143,36 @@ function movieThisCall() {
         console.log("Language of movie: " + response.data.Language);
         console.log("Plot: " + response.data.Plot);
         console.log("Actors: " + response.data.Actors);
+
+    });
+
+}
+
+
+
+// ----------------------------------------
+// doWhatItSaysCall FUNCTION
+
+function doWhatItSaysCall() {
+
+    // This block of code will read from the "random.txt" file.
+    // It's important to include the "utf8" parameter or the code will provide stream data (garbage)
+    // The code will store the contents of the reading inside the variable "data"
+    fs.readFile("random.txt", "utf8", function(error, data) {
+
+        if (error) {
+            return console.log(error);  // If the code experiences any errors it will log the error to the console.
+        }
+
+        console.log(data);
+
+        var dataArray = data.split(",");    // We split the data with commas to make it more readable
+
+        console.log(dataArray);
+
+        userInput2 = dataArray[1];      // Set userInput2 to be "I Want It That Way" that is specified in the random.txt file
+
+        spotifyThisSongCall();      // Call the function spotifyThisSongCall()
 
     });
 
@@ -138,7 +192,7 @@ function movieThisCall() {
 // To run node for liri.js using the specified commands concert-this, spotify-this-song, movie-this, do-what-it-says
 // that we have written above, type the following into the command line:
 // node liri concert-this arianagrande
-// node liri spotify-this-song takeapicture
+// node liri spotify-this-song blackbird
 // node liri movie-this avengers
 // node liri do-what-it-says
 // (note that you don't have to write out the .js like node liri.js concert-this arianagrande in the above, though this will work too)
