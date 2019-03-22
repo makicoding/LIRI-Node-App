@@ -8,6 +8,7 @@ To retrieve the data, the app will send requests using the AXIOS node package to
 
 <br>
 ---
+<br>
 ### Terminal Commands:
 
 node liri concert-this artistname
@@ -40,7 +41,7 @@ The command line is:
 <br>
 *node liri concert-this arianagrande*
 <br></br>
-![alt text](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_01.png)
+![liri_screenshot_01](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_01.png)
 
 <br>
 ---
@@ -68,7 +69,7 @@ The command line is:
 <br>
 *node liri spotify-this-song*
 <br></br>
-![alt text](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_02.png)
+![liri_screenshot_02](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_02.png)
 
 In the second example,  we set the song name to be "blackbird".
 <br>
@@ -76,7 +77,7 @@ The command line is:
 <br>
 *node liri spotify-this-song blackbird*
 <br></br>
-![alt text](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_03.png)
+![liri_screenshot_03](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_03.png)
 
 <br>
 ---
@@ -112,7 +113,7 @@ The command line is:
 <br>
 *node liri movie-this*
 <br></br>
-![alt text](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_04.png)
+![liri_screenshot_04](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_04.png)
 
 In the second example,  we set the movie title to be "avengers".
 <br>
@@ -120,7 +121,7 @@ The command line is:
 <br>
 *node liri spotify-this-song avengers*
 <br></br>
-![alt text](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_05.png)
+![liri_screenshot_05](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_05.png)
 
 <br>
 ---
@@ -147,4 +148,4 @@ The command line for this example is:
 <br>
 *node liri do-what-it-says*
 <br></br>
-![alt text](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_06.png)
+![liri_screenshot_06](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_06.png)
