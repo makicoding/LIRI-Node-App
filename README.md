@@ -7,8 +7,6 @@ LIRI will search Bands in Town for concerts, Spotify for songs, and OMDB for mov
 To retrieve the data, the app will send requests using the AXIOS node package to the Bands in Town, Spotify and OMDB APIs.
 ***
 
-***
-
 ### Terminal Commands:
 
 node liri concert-this artistname
