@@ -138,8 +138,8 @@ function movieThisCall() {
 
         console.log("Title of movie: " + response.data.Title);
         console.log("Year: " + response.data.Year);
-        console.log("IMDB Rating: " + response.data.Ratings[0].Value);
-        console.log("Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
+        console.log("IMDB rating: " + response.data.Ratings[0].Value);
+        console.log("Rotten Tomatoes rating: " + response.data.Ratings[1].Value);
         console.log("Country where movie was produced: " + response.data.Country);
         console.log("Language of movie: " + response.data.Language);
         console.log("Plot: " + response.data.Plot);
@@ -210,6 +210,6 @@ function doWhatItSaysCall() {
 // (note that you don't have to write out the .js like node liri.js concert-this arianagrande in the above, though this will work too)
 
 // Different texts we can put inside random.txt to test out node liri do-what-it-says:
-// concert-this, ariana grande
+// concert-this, the black keys
 // spotify-this-song, i want it that way
 // movie-this, iron man
