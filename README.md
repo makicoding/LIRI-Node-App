@@ -19,7 +19,7 @@ node liri movie-this movietitle
 node liri do-what-it-says
 
 <br>
----
+
 ### node liri concert-this
 
 By entering the following into the command line:
@@ -43,7 +43,7 @@ The command line is:
 ![liri_screenshot_01](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_01.png)
 
 <br>
----
+
 ### node liri spotify-this-song
 
 By entering the following into the command line:
@@ -79,7 +79,7 @@ The command line is:
 ![liri_screenshot_03](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_03.png)
 
 <br>
----
+
 ### node liri movie-this
 
 By entering the following into the command line:
@@ -123,7 +123,7 @@ The command line is:
 ![liri_screenshot_05](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_05.png)
 
 <br>
----
+
 ### node liri do-what-it-says
 
 By entering the following into the command line:
