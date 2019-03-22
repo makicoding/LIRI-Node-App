@@ -7,7 +7,7 @@ LIRI will search Bands in Town for concerts, Spotify for songs, and OMDB for mov
 To retrieve the data, the app will send requests using the AXIOS node package to the Bands in Town, Spotify and OMDB APIs.
 
 <br>
-
+__________
 ### Terminal Commands:
 
 node liri concert-this artistname
@@ -19,7 +19,7 @@ node liri movie-this movietitle
 node liri do-what-it-says
 
 <br>
-
+__________
 ### node liri concert-this
 
 By entering the following into the command line:
@@ -43,7 +43,7 @@ The command line is:
 ![liri_screenshot_01](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_01.png)
 
 <br>
-
+__________
 ### node liri spotify-this-song
 
 By entering the following into the command line:
@@ -79,7 +79,7 @@ The command line is:
 ![liri_screenshot_03](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_03.png)
 
 <br>
-
+__________
 ### node liri movie-this
 
 By entering the following into the command line:
@@ -123,7 +123,7 @@ The command line is:
 ![liri_screenshot_05](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_05.png)
 
 <br>
-
+__________
 ### node liri do-what-it-says
 
 By entering the following into the command line:
