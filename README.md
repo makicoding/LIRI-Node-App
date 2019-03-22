@@ -8,7 +8,6 @@ To retrieve the data, the app will send requests using the AXIOS node package to
 
 <br>
 ---
-<br>
 ### Terminal Commands:
 
 node liri concert-this artistname
