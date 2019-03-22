@@ -148,3 +148,4 @@ The command line for this example is:
 *node liri do-what-it-says*
 <br></br>
 ![alt text](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_06.png)
+<br>
