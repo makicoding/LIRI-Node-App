@@ -6,7 +6,7 @@ It is a Command Line Node app that takes in parameters and gives back data.
 <br></br>
 LIRI will search Bands in Town for concerts, Spotify for songs, and OMDB for movies.
 <br></br>
-The app will send requests using the AXIOS node package to the Bands in Town, Spotify and OMDB APIs, and retrieve data.
+The app will send requests using the AXIOS Node package to the Bands in Town, Spotify and OMDB APIs, and then retrieve data.
 ***
 
 ### Terminal Commands:
