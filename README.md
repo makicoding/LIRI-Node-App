@@ -125,7 +125,7 @@ By entering the following into the command line:
 <br></br>
 *node liri do-what-it-says*
 <br></br>
-and using the fs node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+and using the fs node package, LIRI will read the text inside of random.txt and then use it to call one of LIRI's commands.
 
 In this example, the text inside random.txt is 
 <br>
