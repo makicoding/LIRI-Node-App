@@ -5,8 +5,8 @@ LIRI is a Language Interpretation and Recognition Interface much like SIRI for t
 LIRI will search Bands in Town for concerts, Spotify for songs, and OMDB for movies.
 
 To retrieve the data, the app will send requests using the AXIOS node package to the Bands in Town, Spotify and OMDB APIs.
+***
 
-<br>
 ***
 
 ### Terminal Commands:
