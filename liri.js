@@ -25,7 +25,7 @@ var userInput1 = process.argv[2];
 var userInput2 = process.argv[3]; 
 
 // var userInput2NoSpace = userInput2.replace(" ", "-");    // Here we use the replace() method to remove any spaces (For example: ariana grande would become arianagrande)
-// However the above replace() method doesn't work very well with APIs so we have omitted
+// However the above replace() doesn't work very well with APIs so we have omitted
 
 
 
@@ -93,26 +93,27 @@ function spotifyThisSongCall() {
     }
 
     // Call to Spotify
-    spotify
-    .search({ type: 'track', query: userInput2 })
-    .then(function(response) {
+    spotify.search({ type: 'track', query: userInput2 }, function(err, data) {
 
-        //console.log(response);   // See the entire response from the Spotify call to identify which parts we want to use
-        
-        //for(var j = 0; j < response.tracks.items[0].album.artists.length; j++) {      // THIS DOES NOT WORK, 
-                                                                                        // NEED TO FIND A FIX IN FOR LOOP TO DISPLAY ALL THE DIFFERENT SEARCH RESULTS
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        }
+      
+        // console.log(data);       // This logs to the console the entire data response from the Spotify API 
+    
+        var results = data.tracks.items;
 
-        // THIS IS FOR A SINGLE-SEARCH-RESULT SCENARIO:
-            console.log("Artist: " + response.tracks.items[0].album.artists[0].name);
-            console.log("Song name: " + response.tracks.items[0].name);
-            console.log("Preview link of song from Spotify: " + response.tracks.items[0].href);
-            console.log("Album where song appears: " + response.tracks.items[0].album.name)
-        
-        //}
+        for(var i = 0; i < results.length; i++){
 
-    })
-    .catch(function(err) {
-      console.log(err);     // If the code experiences any errors it will log the error to the console
+            var albumResults = results[i].album;
+
+            console.log("Artist: " + albumResults.artists[0].name);
+            console.log("Song name: " + results[i].name);
+            console.log("Preview link of song from Spotify: " + albumResults.external_urls.spotify);
+            console.log("Album where song appears: " + albumResults.name);
+    
+        }
+
     });
 
 }
@@ -166,14 +167,25 @@ function doWhatItSaysCall() {
 
         console.log(data);
 
-        var dataArray = data.split(",");    // We split the data with commas to make it more readable
+        var dataArray = data.split(", ");    // We split the text data in the random.txt file at ", " to make it more readable
 
         console.log(dataArray);
 
+        userInput1 = dataArray[0];      // Set userInput1 to be "spotify-this-song" that is specified in the random.txt file
+
         userInput2 = dataArray[1];      // Set userInput2 to be "I Want It That Way" that is specified in the random.txt file
 
-        spotifyThisSongCall();      // Call the function spotifyThisSongCall()
-
+        // If Statements to specify which function to call
+        if (userInput1 === "concert-this") {
+            concertThisCall();          // Call the function concertThisCall()
+        }
+        if (userInput1 === "spotify-this-song") {
+            spotifyThisSongCall();      // Call the function spotifyThisSongCall()
+        }
+        if (userInput1 === "movie-this") {
+            movieThisCall();            // Call the function movieThisCall()
+        }
+        
     });
 
 }
@@ -196,3 +208,8 @@ function doWhatItSaysCall() {
 // node liri movie-this avengers
 // node liri do-what-it-says
 // (note that you don't have to write out the .js like node liri.js concert-this arianagrande in the above, though this will work too)
+
+// Different texts we can put inside random.txt to test out node liri do-what-it-says:
+// concert-this, ariana grande
+// spotify-this-song, i want it that way
+// movie-this, iron man
