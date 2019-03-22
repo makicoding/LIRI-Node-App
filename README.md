@@ -16,9 +16,8 @@ node liri spotify-this-song songname
 node liri movie-this movietitle
 <br> 
 node liri do-what-it-says
+***
 
-<br>
-__________
 ### node liri concert-this
 
 By entering the following into the command line:
@@ -40,9 +39,8 @@ The command line is:
 *node liri concert-this arianagrande*
 <br></br>
 ![liri_screenshot_01](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_01.png)
+***
 
-<br>
-__________
 ### node liri spotify-this-song
 
 By entering the following into the command line:
@@ -76,9 +74,8 @@ The command line is:
 *node liri spotify-this-song blackbird*
 <br></br>
 ![liri_screenshot_03](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_03.png)
+***
 
-<br>
-__________
 ### node liri movie-this
 
 By entering the following into the command line:
@@ -120,9 +117,8 @@ The command line is:
 *node liri spotify-this-song avengers*
 <br></br>
 ![liri_screenshot_05](https://raw.githubusercontent.com/makicoding/LIRI-Node-App/master/screenshots/liri_screenshot_05.png)
+***
 
-<br>
-__________
 ### node liri do-what-it-says
 
 By entering the following into the command line:
