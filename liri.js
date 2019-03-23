@@ -63,6 +63,7 @@ if (userInput1 === "do-what-it-says") {
 function concertThisCall() {
 
     // AXIOS Call
+    // Trilogy's Bands In Town API key: codingbootcamp
     var queryURL = "https://rest.bandsintown.com/artists/" + userInput2 + "/events?app_id=codingbootcamp";
 
     axios.get(queryURL).then(function(response) {
@@ -130,6 +131,7 @@ function movieThisCall() {
     }
 
     // AXIOS Call
+    // Trilogy's OMDB API Key: trilogy
     var queryURL = "http://www.omdbapi.com/?t=" + userInput2 + "&y=&plot=short&apikey=trilogy";
 
     axios.get(queryURL).then(function(response) {
