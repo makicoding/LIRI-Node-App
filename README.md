@@ -10,6 +10,8 @@ The app will send requests using the AXIOS Node package to the Bands in Town, Sp
 ***
 
 <a href="https://drive.google.com/file/d/1uUWgMUeubtmGsjSks8UTP9gt_Utle_HO/view?usp=sharing" target="_blank">Click here to view demo video of app</a>
+
+[Click here to view demo video of app](https://drive.google.com/file/d/1uUWgMUeubtmGsjSks8UTP9gt_Utle_HO/view?usp=sharing)
 ***
 
 ### Terminal Commands:
