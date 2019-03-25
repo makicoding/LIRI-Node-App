@@ -22,10 +22,11 @@ var spotify = new Spotify(keys.spotify);
 
 // Global Variables
 var userInput1 = process.argv[2];
-var userInput2 = process.argv[3]; 
-
-// var userInput2NoSpace = userInput2.replace(" ", "-");    // Here we use the replace() method to remove any spaces (For example: ariana grande would become arianagrande)
-// However the above replace() doesn't work very well with APIs so we have omitted
+var userInput2 = (process.argv.slice(3).join(" ") || process.argv[3]);  // Use Array slice() and Array join() to accept multiple words (and single words too) for process.argv[3] 
+                                                                        // For example: Ariana Grande
+                                                                        // See explanation of Array slice() and Array join() at bottom of JS document.
+                                                                        // Also use OR || statement for var userInput2 to capture process.argv[3] without slice().join() too
+                                                                        // in the case of when a user doesn't enter anything input text for process.argv[3]
 
 
 
@@ -195,6 +196,54 @@ function doWhatItSaysCall() {
 
 
 // ----------------------------------------
+// ADDITIONAL NOTES: 
+
+// npm init -y          (must do this at start of any node project if you are going to be using npm install to install packages!)
+
+// At the start of any node project, this must be done:
+// Navigate to the root of project and type the following into the command line: npm init -y 
+// This will initialize a package.json file for the project. 
+// The package.json file is required for installing third party npm packages and saving their version numbers. 
+// If you fail to initialize a package.json file, it will be troublesome, and at times almost impossible for 
+// anyone else to run your code after cloning your project.
+
+
+
+// ----------
+// process.argv
+
+// process.argv will print out any command line arguments.
+// In your JS file have the following:
+// console.log(process.argv);
+// Then in the command line type: node nameOfJsFile
+// This will then display to the command line all of the process.argv arguments
+
+// process.argv[0] is used to initialize node.  So in the command line you would type: node
+// process.argv[1] is used to specify the JS file to open
+
+
+
+// ----------
+// var userInput2 = process.argv.slice(3).join(" ");
+
+// Array slice() returns the selected elements in an array, as a new array object.
+// slice() selects the elements starting at the given start argument.
+
+// join() joins the elements of an array into a string, and returns the string.
+// The elements will be separated by a specified separator. The default separator is comma (,).
+// Here we specified the separator to be a space (" ") instead of the default comma (,).
+
+
+
+// To capture either multiple words or no words at all (i.e. no userInput for process.argv[3]), use the following code: 
+// var userInput2 = (process.argv.slice(3).join(" ") || process.argv[3]);   // Use Array slice() and Array join() to accept multiple words (and single words too) for process.argv[3]
+                                                                            // For example: Ariana Grande
+                                                                            // Use OR || statement for var userInput2 to capture process.argv[3] without slice().join() too
+                                                                            // in the case of when a user doesn't enter any input text for process.argv[3]
+
+
+
+// ----------------------------------------
 // COMMAND LINE commands
 
 // To install packages from npmjs.com type the following into the command line (the name npm stands for Node Package Manager):
@@ -205,9 +254,9 @@ function doWhatItSaysCall() {
 
 // To run node for liri.js using the specified commands concert-this, spotify-this-song, movie-this, do-what-it-says
 // that we have written above, type the following into the command line:
-// node liri concert-this arianagrande
-// node liri spotify-this-song blackbird
-// node liri movie-this avengers
+// node liri concert-this arianagrande          // you could also type: node liri concert-this ariana grande    because we have used slice() and join()
+// node liri spotify-this-song blackbird        // you could also type: node liri spotify-this-song welcome to the fold     because we have used slice() and join()
+// node liri movie-this avengers                // you could also type: node liri movie-this the matrix     because we have used slice() and join()
 // node liri do-what-it-says
 // (note that you don't have to write out the .js like node liri.js concert-this arianagrande in the above, though this will work too)
 
