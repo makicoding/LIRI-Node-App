@@ -43,16 +43,20 @@ if (userInput1 === "concert-this") {
     concertThisCall();
 } 
 
-if (userInput1 === "spotify-this-song") {
+else if (userInput1 === "spotify-this-song") {
     spotifyThisSongCall();
 }
 
-if (userInput1 === "movie-this") {
+else if (userInput1 === "movie-this") {
     movieThisCall();
 }
 
-if (userInput1 === "do-what-it-says") {
+else if (userInput1 === "do-what-it-says") {
     doWhatItSaysCall();
+}
+
+else {
+    console.log("Unrecognized command");        // If the user does not input one of the four commands above for userInput1, then console log "Unrecognized command"
 }
 
 
@@ -73,6 +77,7 @@ function concertThisCall() {
 
         for(var i = 0; i < response.data.length; i++) {
             var venueLocation = response.data[i].venue.country + ", " + response.data[i].venue.city + " " + response.data[i].venue.region;
+            console.log("----------------------------------------");
             console.log("Name of venue: " + response.data[i].venue.name);
             console.log("Venue location: " + venueLocation);
             console.log("Date of event: " + moment(response.data[i].datatime).format("MM/DD/YYYY")); 
@@ -109,6 +114,7 @@ function spotifyThisSongCall() {
 
             var albumResults = results[i].album;
 
+            console.log("----------------------------------------");
             console.log("Artist: " + albumResults.artists[0].name);
             console.log("Song name: " + results[i].name);
             console.log("Preview link of song from Spotify: " + albumResults.external_urls.spotify);
