@@ -204,6 +204,24 @@ function doWhatItSaysCall() {
 // ----------------------------------------
 // ADDITIONAL NOTES: 
 
+// .gitignore file
+
+// Create .gitignore file at start of project and include inside it the following lines of code:
+// node_modules
+// .DS_Store
+// .env
+
+// It's good practice to always include node_modules in the .gitignore file because this folder can get huge.
+// We have coded to "require" npm install of any packages necessary for this node app, so if someone clones this repo from
+// gitHub, all they have to do is npm install any necessary packages for the app to work. Therefore the node_modules folder 
+// doesn't need to be uploaded to gitHub.
+
+// .env file includes Maki's spotify secret. This should be hidden from the public to avoid any third party misuse.
+// Therefore we include this in the .gitignore file so that it doesn't get pushed to gitHub.
+
+
+
+// ----------
 // npm init -y          (must do this at start of any node project if you are going to be using npm install to install packages!)
 
 // At the start of any node project, this must be done:
