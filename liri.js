@@ -276,6 +276,15 @@ function doWhatItSaysCall() {
 // npm install axios
 // npm install moment --save
 
+// If cloning a CLI App (Command Line Interface App) like LIRI from a GitHub repository and a package.json file already exists
+// inside it, you can just type the following into the command line:
+// npm install  // or:
+// npm i                    // npm i is just a shortcut version of npm install.
+// This will install everything listed in the dependencies area of the package.json file.
+// You don't need to manually install every npm package like:
+// npm install fs   // or:
+// npm install axios        // etc.
+
 // To run node for liri.js using the specified commands concert-this, spotify-this-song, movie-this, do-what-it-says
 // that we have written above, type the following into the command line:
 // node liri concert-this arianagrande          // you could also type: node liri concert-this ariana grande    because we have used slice() and join()
