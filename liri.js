@@ -284,6 +284,9 @@ function doWhatItSaysCall() {
 // node liri do-what-it-says
 // (note that you don't have to write out the .js like node liri.js concert-this arianagrande in the above, though this will work too)
 
+// If you need to exit at any point, type into the command line:
+// control c
+
 // Different texts we can put inside random.txt to test out node liri do-what-it-says:
 // concert-this, the black keys
 // spotify-this-song, i want it that way
