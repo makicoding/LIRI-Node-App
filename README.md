@@ -1,5 +1,10 @@
 # LIRI Node App
 
+[Click here to view demo video of app](https://drive.google.com/file/d/1uUWgMUeubtmGsjSks8UTP9gt_Utle_HO/view?usp=sharing)
+***
+
+### Overview
+
 LIRI is a Language Interpretation and Recognition Interface much like SIRI for the iPhone is a Speech Interpretation and Recognition Interface. 
 <br></br>
 It is a Command Line Node app that takes in parameters and gives back data.
@@ -9,10 +14,7 @@ LIRI will search Bands in Town for concerts, Spotify for songs, and OMDB for mov
 The app will send requests using the AXIOS Node package to the Bands in Town, Spotify and OMDB APIs, and then retrieve data.
 ***
 
-[Click here to view demo video of app](https://drive.google.com/file/d/1uUWgMUeubtmGsjSks8UTP9gt_Utle_HO/view?usp=sharing)
-***
-
-### Terminal Commands:
+### Terminal Commands
 
 node liri concert-this artistname
 <br>
