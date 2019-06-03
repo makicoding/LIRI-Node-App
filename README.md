@@ -3,6 +3,9 @@
 [Click here to view demo video of app](https://drive.google.com/file/d/1uUWgMUeubtmGsjSks8UTP9gt_Utle_HO/view?usp=sharing)
 ***
 
+Technologies used: Node JS, JavaScript, API, JSON, AXIOS, Moment JS. 
+
+***
 ### Overview
 
 LIRI is a Language Interpretation and Recognition Interface much like SIRI for the iPhone is a Speech Interpretation and Recognition Interface. 
